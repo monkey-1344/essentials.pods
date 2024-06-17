@@ -93,6 +93,26 @@
                     calculatePrice();
                 });
             });
+            $(document).ready(function() {
+                $('#ajax-form').on('submit', function(event) {
+                    event.preventDefault();
+
+                    $.ajax({
+                        url: 'process_form.php',
+                        type: 'POST',
+                        data: $(this).serialize(),
+                        success: function(response) {
+                            $('#response').html(response);
+                            $('#responseModal').modal('show');
+                            $('#ajax-form')[0].reset(); // Clear form fields
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            $('#response').html('An error occurred: ' + textStatus);
+                            $('#responseModal').modal('show');
+                        }
+                    });
+                });
+            });
         </script>
     </div>
 </section>
