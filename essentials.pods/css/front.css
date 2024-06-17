@@ -1,0 +1,19 @@
+.links-footer{
+    color: white;
+    text-decoration: none;
+}
+.form-cart{
+    padding-top: 0px !important;
+}
+.div-spacer{
+    height: 10px !important;
+}
+.navbar-color{
+    background-color: #212529 !important;
+    a{
+        color: white;
+    }
+}
+.header-color{
+    background-color:#343a40 ;
+}
