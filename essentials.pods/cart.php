@@ -92,13 +92,11 @@
                 $('#quantity').on('input', function() {
                     calculatePrice();
                 });
-            });
-            $(document).ready(function() {
                 $('#ajax-form').on('submit', function(event) {
                     event.preventDefault();
 
                     $.ajax({
-                        url: 'process_form.php',
+                        url: 'submit_form.php',
                         type: 'POST',
                         data: $(this).serialize(),
                         success: function(response) {
@@ -113,6 +111,7 @@
                     });
                 });
             });
+
         </script>
     </div>
 </section>
